@@ -55,19 +55,20 @@ Here is a breakdown of the key directories and files in the project:
    ```bash
    git clone https://github.com/yourusername/farmer-scheme.git
    cd farmer-scheme
+   
 2. **Set up the backend**:
-Navigate to the backend directory, build and start the Spring Boot application:
-  ```bash
-    cd backend
-    mvn install
-    mvn spring-boot:run
+   Navigate to the backend directory, build and start the Spring Boot application:
+   ```bash
+   cd backend
+   mvn install
+   mvn spring-boot:run
 
 3. **Set up the frontend**:
-Navigate to the frontend directory and start the Angular application:
-  ```bash
-  cd ../frontend
-  npm install
-  ng serve
+   Navigate to the frontend directory and start the Angular application:
+   ```bash
+   cd ../frontend
+   npm install
+   ng serve
 
 4. **Database Configuration**:
 Configure the Oracle Database connection in the Spring Boot application's application.properties file.
