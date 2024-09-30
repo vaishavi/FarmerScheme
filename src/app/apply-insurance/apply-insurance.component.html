@@ -1,0 +1,68 @@
+<head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"></head>
+
+<body>
+
+    <form [formGroup]="ApplyInsuranceForm" (ngSubmit)="Submitdata()" novalidate>
+        <div class="insur-box" style=" border-radius: 5%; box-shadow: black;">
+            <h3 style="margin-left: 65px;"><b>Insurance Application</b></h3>
+
+            <div class="form-group">
+                <label for="applicantName">Applicant Name</label>
+                <input type="text" class="form-control" formControlName="applicantName" id="applicantName" aria-describedby="applicantNameHelp"
+                    placeholder="Enter name">
+                <div *ngIf="!applicantName?.valid && (applicantName?.dirty || applicantName?.touched)"
+                    class="form-group error col-8">
+                    <div class="error" *ngIf="applicantName!.errors!.required">
+                        Name is required
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cropType">Crop Type</label>
+                <select class="form-control" id="cropType" name="cropType">
+                    <option value="kharif">Kharif</option>
+                    <option value="rabi">Rabi</option>
+                    <option value="horticularal">Horticularal</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cropName">Crop Name</label>
+                <input type="text" class="form-control" formControlName="cropName" id="cropName" aria-describedby="cropNameHelp"
+                    placeholder="Enter crop name">
+                <div *ngIf="!cropName?.valid && (cropName?.dirty || cropName?.touched)" class="form-group error col-8">
+                    <div class="error" *ngIf="cropName!.errors!.required">
+                        Crop name is required
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="landArea">Land Area</label>
+                <input type="number" class="form-control" formControlName="cropName" id="landArea" aria-describedby="landAreaHelp"
+                    placeholder="Enter land area">
+                <div *ngIf="!landArea?.valid && (landArea?.dirty || landArea?.touched)" class="form-group error col-8">
+                    <div class="error" *ngIf="landArea!.errors!.required">
+                        Land area is required
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="sumInsured">SumInsured</label>
+                <input type="number" class="form-control" formControlName="sumInsured" id="sumInsured" aria-describedby="sumInsuredHelp"
+                    placeholder="Enter the sum to be insured">
+                <div *ngIf="!sumInsured?.valid && (sumInsured?.dirty || sumInsured?.touched)" class="form-group error col-8">
+                    <div class="error" *ngIf="sumInsured!.errors!.required">
+                        Sum Insured is required
+                    </div>
+                </div>
+            </div>
+
+
+
+            
+            <button type="submit" class="btn btn-primary" style="border-radius: 10%; margin-top: 10px; color: rgb(255, 254, 254); background-color: rgb(231, 19, 19);"
+            [disabled]="!ApplyInsuranceForm.valid">Apply</button>
+        </div>
+    </form>
+</body>

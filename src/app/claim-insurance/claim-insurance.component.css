@@ -1,0 +1,50 @@
+body{
+    /*background-image: url("src\assets\farmerhome.jpg");*/
+    background-image:url("src/assets/loginbg.jpg") ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 50em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.main{
+    height:47em; 
+    
+
+}
+
+.insur-box{
+   
+    padding: 2%;
+    background-color: rgb(214, 240, 181);
+    width:400px;
+    height:680px;
+    
+    color:rgb(15, 14, 14);
+    top:50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding:70px 30px;
+    padding-top: 2em;
+    }
+
+    /* input[type=text] {
+        border: none;
+        border-bottom: 2px solid grey;
+      } */
+
+p{
+    text-align: center;
+    color: grey;
+}
+
+form.normal-form{
+    margin: 10px;
+}
+    
+
+
+
+

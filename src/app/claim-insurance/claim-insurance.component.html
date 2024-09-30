@@ -1,0 +1,106 @@
+<!-- <body>
+    <div class="container-fluid">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="insur-box" style=" border-radius: 5%; box-shadow: black;">
+                    <img src="assets/farmerInsurance.jpg" width="120" height="120"
+                        style="display: block; margin-left: auto; margin-right: auto;" />
+                    <h3 style="margin-left: 65px;"><b>Insurance Claim</b></h3>
+                    <p>Fill up the form to claim your insurance</p>
+                    <form>
+                        <form >
+                            <div class="in">
+                                <label for="policyId"><h6>Policy Id</h6></label>
+                                <input type="text" matInput placeholder="Enter the policy Id" FormControlName="policyId">                
+                            </div>
+                                
+                            
+                
+                            <div class="in">
+                                <label for="sumInsured"><h6>Sum Insured</h6></label>
+                                <input type="text" placeholder="Enter the amount" name="sumInsured">
+                
+                            </div>
+                
+                            <div class="in">
+                                <label for="insuredName"><h6>Name of the Insured</h6></label>
+                                <input type="text" placeholder="Enter the insuree name" name="insuredName">
+                
+                            </div>
+                            <div class="in">
+                                <label for="causeOfLoss"><h6>Cause of Loss</h6></label>
+                                <input type="text" placeholder="Enter the cause of loss" name="causeOfLoss">
+                
+                            </div>
+                            <div class="in">
+                                <label for="dateOfLoss"><h6>Date of Loss</h6></label>
+                                <input type="text" placeholder="Enter the date of loss" name="dateOfLoss">
+                
+                            </div>
+                            
+                            <button type="submit" class="btn btn-light btn-lg" style=" height:30px; width: 80px;border-radius: 10%; margin-top: 10px; color: rgb(255, 254, 254); background-color: rgb(231, 19, 19);" >Submit</button><br><br>
+                
+                
+                        </form>
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body> -->
+
+
+<body>
+    <div class="container-fluid">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="insur-box" style=" border-radius: 5%; box-shadow: black;">
+                    <img src="assets/farmerInsurance.jpg" width="120" height="120"
+                        style="display: block; margin-left: auto; margin-right: auto;" />
+                    <h3 style="margin-left: 65px;"><b>Insurance Claim</b></h3>
+                    <p>Fill up the form to claim your insurance</p>
+                    <form [formGroup]="ClaimInsuranceForm" class="normal-form example-form">
+
+                        
+                          
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Enter the policy Id</mat-label>                            
+                            <input type="text"   formControlName="policyId" matInput >
+                            <mat-error>This field is mandatory!</mat-error>
+                        </mat-form-field> 
+
+                        <mat-form-field>
+                            <mat-label>Enter the amount</mat-label> 
+                            <input matInput type="text" formControlName="sumInsured" >
+
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Enter the insuree name</mat-label> 
+                            <input matInput type="text" formControlName="insureeName" >
+
+
+                        </mat-form-field>
+
+
+                        <mat-form-field>
+                            <mat-label>Enter the cause of loss</mat-label> 
+                            <input matInput type="text"  formControlName="causeOfLoss">
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Enter the date of loss</mat-label>
+                            <input matInput type="text"  formControlName="dateOfLoss">
+                        </mat-form-field> 
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

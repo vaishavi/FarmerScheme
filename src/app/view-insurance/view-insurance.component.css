@@ -1,0 +1,16 @@
+body{
+    /*background-image: url("src\assets\farmerhome.jpg");*/
+    background-image:url("src/assets/loginbg.jpg") ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 50em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .container{
+      padding: 5%;
+  }
